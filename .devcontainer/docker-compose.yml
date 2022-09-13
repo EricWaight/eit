@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  devcontainer:
+    image: netjets/eit-dev-container:0.1
+    build: .
+    container_name: eit-dev-container
+    hostname: eit-dev.local
+    working_dir: /workspace
+    ports:
+       - 3000:3000
+    volumes:
+       - ..:/workspace:cached
+    command: sleep infinity
